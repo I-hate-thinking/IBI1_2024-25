@@ -22,6 +22,6 @@ df.set_index('Language',inplace=True)
 #set the 'Language' as index
 key=input("please input the language you want to inquire")
 if key in df.index:
-    print(f"this language's users are {df.loc[key,'Users']} of the word's population")
+    print(f"this language's users are {df.loc[key,'Users']}% of the word's population")
 else:
     print("inexistence")
