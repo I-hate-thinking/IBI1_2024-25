@@ -11,15 +11,15 @@ import matplotlib.pyplot as plt
 labels_uk=['England','Wales','Northern Ireland','Scotland']
 labels_Zhejiang=['Zhejiang','Fujian','Jiangxi','Anhui','Jiangsu']
 plt.figure(figsize=(6,6))
-plt.pie(uk_countries,labels=labels_uk,autopct='%1.11f%%',startangle=0)
-#
+plt.pie(uk_countries,labels=labels_uk,autopct='%1.1f%%',startangle=0)
+#draw the pie
 plt.axis('equal')
-#
+#set the pie chart as a circular shape
 plt.title(' the distribution of population sizes separately in UK countries')
 #add the title
 plt.show()
 plt.figure(figsize=(6,6))
-plt.pie(around_Zhejiang,labels=labels_Zhejiang,autopct='%1.11f%%',startangle=0)
+plt.pie(around_Zhejiang,labels=labels_Zhejiang,autopct='%1.1f%%',startangle=0)
 plt.axis('equal')
 plt.title(' the distribution of population sizes separately in Zhejiang-neighbouring provinces')
 plt.show()
