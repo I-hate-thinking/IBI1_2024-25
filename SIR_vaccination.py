@@ -5,7 +5,7 @@ def run_sir_simulation(vaccination_percent):
     N=10000 #define the total number
     beta=0.3 #define beta
     gamma=0.05 #define gamma
-    vaccinated_count=int(N*vaccinated_percent/100)
+    vaccinated_count=int(N*vaccination_percent/100)
     S=[N-vaccinated_count-1] #the initial number of susceptible people
     V=[vaccinated_count] #the vaccinated people
     I=[1] #the initial number of infected people
@@ -15,13 +15,13 @@ def run_sir_simulation(vaccination_percent):
         infection_prob_susceptible=beta*I[-1]/N #calculate the current infection probability
         infection_prob_vaccinated=infection_prob_susceptible*(1-vaccine_efficacy) #infection probability for vaccinated
         if S[-1]>0:
-            infection_results_S=np.random.choice(range(2),size=S[-1],p=[1-infection_prob,infection_prob])
+            infection_results_S=np.random.choice(range(2),size=S[-1],p=[1-infection_prob_susceptible,infection_prob_susceptible])
             infections_S=np.sum(infection_results_S)
         else:
             infections_S=0
     #randomly choose susceptible people for infection
         if V[-1]>0:
-            infection_results_V=np.random.choice(range(2),size=I[-1],p=[1-gamma,gamma]) 
+            infection_results_V=np.random.choice(range(2),size=I[-1],p=[1-infection_prob_vaccinated,infection_prob_vaccinated]) 
             infections_V=np.sum(infection_results_V)
         else:
             infections_V=0 
@@ -50,19 +50,40 @@ def run_sir_simulation(vaccination_percent):
     return S,V,I,R
 vaccination_percentages=[0,10,20,30,50,70]
 results={}
-#
+#Run simulations for different vaccination percentages
+for vp in vaccination_percentages:
+    results[vp]=run_sir_simulation(vp)
+#plot comparison of infected curves
 plt.figure(figsize=(6,4),dpi=150)
+for vp in vaccination_percentages:
+    plt.plot(results[vp][2], label=f'{vp}% vaccinated')
+plt.xlabel('Time')
+plt.ylabel('Number of Infected People')
+plt.title('Infected People Over Time for Different Vaccination Percentages')
+plt.legend()
+plt.grid(True)
+plt.savefig("Vaccination_Comparison.png", format="png")
+plt.show()
+# Plot comparison of infected curves
+plt.figure(figsize=(6,4),dpi=150)
+S, V, I, R = results[10]
 plt.plot(S,label="Susceptible")
+plt.plot(V, label="Vaccinated")
 plt.plot(I,label="Infected")
 plt.plot(R,label="Recovered")
 plt.xlabel('Time')
 plt.ylabel('Number of people')
-plt.title('SIR Model Simulation')
+plt.title('SIRV Model with 10% Vaccination')
 plt.legend()
 plt.grid(True)
-plt.savefig("SIR Model.png",format="png")
+plt.savefig("SIRv_Model_10%.png",format="png")
 plt.show()
-#draw the result
+# Plot one scenario with all compartments (10% vaccinated)
 
+print("Peak infections for each vaccination percentage:")
+for vp in vaccination_percentages:
+    peak_infections = max(results[vp][2])
+    print(f"{vp}% vaccinated: {peak_infections} peak infections")
+# Print peak infections for each scenario
 
 
