@@ -1,4 +1,6 @@
-Hello, my name is Rob.
+Hello, my name is Dong Feiyang.
+My student ID is 3240111105.
+This course is IBI1 2025-26
 I like drinking tea and eating chocolate biscuits.
 I am enjoying teaching IBI1 in person again 
 I am happy that I can push my repo from Visual Studio Code to GitHub
