@@ -1,0 +1,10 @@
+This Git & GitHub practical operation enabled me to master the basic commands of version control, 
+including init, add, commit, branch, merge, etc. 
+I also understood the independent modification and merging logic of branches.
+I learned to replicate a GitHub repository and clone it to the local machine, 
+and mastered the workflow of pushing local modifications to the remote repository.
+Using GitHub Pages, I successfully built my personal website, 
+learned the simple configuration of the Jekyll framework, 
+and achieved the customization of website styles.
+I realized the importance of Git version control in project development, 
+which can effectively trace modification records and solve conflicts in multi-person collaboration.
