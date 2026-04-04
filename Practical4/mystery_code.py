@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:which turn They are equal
+# Answer: Generates 10 random integers between 1 and 10, calculates their sum and outputs the result.
 
 # Import libraries
 # randint allows drawing a random number,
@@ -10,12 +10,12 @@ from random import randint
 # e.g. ceil(4.2)=5
 from math import ceil
 
+total_rand = 0
 progress=0
-while progress>=0:
+while progress<=10:
 	progress+=1
-	first_n = randint(1,6)
-	second_n = randint(1,6)
-	if first_n == second_n:
-		print(progress)
-		break
+	n = randint(1,10)
+	total_rand+=n
+
+print(total_rand)
 
