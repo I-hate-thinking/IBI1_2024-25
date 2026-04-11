@@ -10,16 +10,16 @@ cr = 80
 #check the input
 valid = True
 if age >= 100:
-    print("Error:Age must be less than 100.")
+    print("Error: Age must be less than 100.")
     valid = False
 if weight <=20 or weight >=80:
-    print("Error:The weight must be between 20 and 80.")
+    print("Error: The weight must be between 20 and 80.")
     valid = False
 if cr <=0 or cr >=100:
-    print("Error:Cr must be within the range of 0 to 100.")
+    print("Error: Cr must be within the range of 0 to 100.")
     valid = False
 if gender not in ["male","female"]:
-    print("Error: Gender must be either "male" or "female".")
+    print('Error: Gender must be either "male" or "female".')
     valid = False
 
 # calculate
