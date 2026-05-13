@@ -1,0 +1,5 @@
+Question: What was the distribution of DALYs across all countries in 2019?
+
+Code line: The code for this question starts at line 68 in dalys.py.
+
+Result discussion: The boxplot shows a wide spread in DALYs across countries in 2019, with a long upper tail indicating a few countries have extremely high disease burden. Most countries cluster at lower DALYs values, while outliers represent countries with severe health challenges. This pattern reflects large global inequalities in disease burden.
