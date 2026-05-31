@@ -1,0 +1,26 @@
+What is the length of this protein in amino acids?
+There are 289 amino acid.
+Where is it found in the cell?
+At the nucleus.
+How many hits did you obtain?
+there are 250 results.
+What is the range of the percentage identity of these retrieved alignments?
+52.3%
+Find the best alignment with the mouse DLX5 protein (UniProt ID: P70396).What is the percentage identity of this alignment?
+96.5%
+
+Alignment: Human DLX5 (P56178) vs Mouse DLX5 (P70396)
+Total BLOSUM62 score: 1490
+Identical residues: 279 / 289
+Identity: 96.54%
+
+Alignment: Human DLX5 (P56178) vs Random sequence
+Total BLOSUM62 score: -188
+Identical residues: 24 / 289
+Identity: 8.30%
+
+Alignment: Mouse DLX5 (P70396) vs Random sequence
+Total BLOSUM62 score: -194
+Identical residues: 24 / 289
+Identity: 8.30%
+
